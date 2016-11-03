@@ -57,7 +57,7 @@ $(window).load(function() {
 	function showNextItemOnBillboard() {
 		var currentBoardImage = $("#billboard div:visible");
 		var currentBoardText = $("#billboardtext div:visible");
-		var nextRandomBoard = TOTAL_BOARDS + 1; //Math.floor(Math.random() * TOTAL_BOARDS);
+		var nextRandomBoard = Math.floor(Math.random() * TOTAL_BOARDS);
 
 		currentBoardText.slideUp("slow", function() {
 			$("#billboard div:eq(" + nextRandomBoard + ")").animate({
