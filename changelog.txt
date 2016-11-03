@@ -1,5 +1,10 @@
 Bierdopje Billboard Randomizer
 
+Version 1.2 (3 November 2016)
+Fixed randomizer picking the same number causing billboard getting stuck.
+Note: Due to timing issues and not keeping the previous billboard value,
+      having the developer tab open will most likely cause the billboard to go default.
+
 Version 1.1 (3 November 2016)
 Fixed off-by-one calculation mistake (would stop the rotation at <1% change)
 

@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Bierdopje Billboard Randomizer
 // @namespace    http://www.bierdopje.com
-// @version      1.2
+// @version      1.1
 // @description  Randomizes the billboard on the homepage.
 // @match        http://*.bierdopje.com/
 // @run-at       document-start
@@ -55,33 +55,18 @@ $(window).load(function() {
 	}
 
 	function showNextItemOnBillboard() {
-		var nextRandomBoard = Math.floor(Math.random() * TOTAL_BOARDS);
-		
 		var currentBoardImage = $("#billboard div:visible");
 		var currentBoardText = $("#billboardtext div:visible");
-		var nextBoardImage = $("#billboard div:eq(" + nextRandomBoard + ")");
-		var nextBoardText = $("#billboardtext div:eq(" + nextRandomBoard + ")");
-		
-		if (currentBoardImage[0] === nextBoardImage[0]) {
-			var anotherRandomBoard = getRandomOtherThan(nextRandomBoard);
-			
-			nextBoardImage = $("#billboard div:eq(" + anotherRandomBoard + ")");
-			nextBoardText = $("#billboardtext div:eq(" + anotherRandomBoard + ")");
-		}
+		var nextRandomBoard = TOTAL_BOARDS + 1; //Math.floor(Math.random() * TOTAL_BOARDS);
 
 		currentBoardText.slideUp("slow", function() {
-			nextBoardImage.animate({
+			$("#billboard div:eq(" + nextRandomBoard + ")").animate({
 				width: 'show'
 			}, 'slow', function() {
 				currentBoardImage.fadeOut("slow", function() {
-					nextBoardText.slideDown("slow");
+					$("#billboardtext div:eq(" + nextRandomBoard + ")").slideDown("slow");
 				});
 			});
 		});
-	}
-	
-	function getRandomOtherThan(oldRandom) {
-		var currentRandom = Math.floor(Math.random() * TOTAL_BOARDS);
-		return (currentRandom === oldRandom) ? getRandomOtherThan(currentRandom) : currentRandom;
 	}
 });

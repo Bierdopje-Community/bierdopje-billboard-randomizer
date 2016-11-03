@@ -3,7 +3,7 @@ Randomizes the billboard on Bierdopje.com's homepage.
 <BR/>
 Enjoy.
 <BR/><BR/>
-Version <strong>1.1</strong>
+Version <strong>1.2</strong>
 
 <A HREF="https://github.com/Bierdopje-Community/bierdopje-billboard-randomizer/raw/master/bierdopje-billboard-randomizer-latest.user.js">INSTALL</A>
 

@@ -1,0 +1,7 @@
+Bierdopje Billboard Randomizer
+
+Version 1.1 (3 November 2016)
+Fixed off-by-one calculation mistake (would stop the rotation at <1% change)
+
+Version 1.0 (2 November 2016)
+First release
