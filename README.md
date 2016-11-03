@@ -1,14 +1,11 @@
 # Bierdopje Billboard Randomizer
-Randomizes the billboard on the homepage.
+Randomizes the billboard on Bierdopje.com's homepage.
 <BR/>
 Enjoy.
 <BR/><BR/>
-Version <strong>1.0</strong>
+Version <strong>1.1</strong>
 
 <A HREF="https://github.com/Bierdopje-Community/bierdopje-billboard-randomizer/raw/master/bierdopje-billboard-randomizer-latest.user.js">INSTALL</A>
-
-# Screenshot
-<IMG SRC="https://raw.githubusercontent.com/Bierdopje-Community/bierdopje-billboard-randomizer/master/screenshots/preview.png" />
 
 # Description
 This repository includes a userscript for Greasemonkey and Tampermonkey that randomizes the billboard on the Bierdopje homepage.
