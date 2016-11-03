@@ -1,0 +1,4 @@
+Bierdopje Billboard Randomizer
+
+Version 1.0 (2 November 2016)
+First release

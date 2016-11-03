@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Bierdopje Billboard Randomizer
 // @namespace    http://www.bierdopje.com
-// @version      1.1
+// @version      1.0
 // @description  Randomizes the billboard on the homepage.
 // @match        http://*.bierdopje.com/
 // @run-at       document-start
@@ -40,7 +40,7 @@ $(function() {
 	}
 	
 	function setInitialBillboard() {
-		var random = Math.floor(Math.random() * TOTAL_BOARDS);
+		var random = Math.floor((Math.random() * TOTAL_BOARDS) + 1);
 		
 		$("#billboard div:eq(" + random + ")").show();
 		$("#billboardtext div:eq(" + random + ")").show();
@@ -57,7 +57,7 @@ $(window).load(function() {
 	function showNextItemOnBillboard() {
 		var currentBoardImage = $("#billboard div:visible");
 		var currentBoardText = $("#billboardtext div:visible");
-		var nextRandomBoard = TOTAL_BOARDS + 1; //Math.floor(Math.random() * TOTAL_BOARDS);
+		var nextRandomBoard = Math.floor((Math.random() * TOTAL_BOARDS) + 1);
 
 		currentBoardText.slideUp("slow", function() {
 			$("#billboard div:eq(" + nextRandomBoard + ")").animate({
